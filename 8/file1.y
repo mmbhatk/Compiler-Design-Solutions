@@ -28,15 +28,15 @@ M	:	'(' E ')' {printf("\nParanthesis recognized.");}
 	;
 E	:	'(' E ')' {printf("\nParanthesis recognized."); $$ = $2;}
 	|	E '+' E {printf("\nPlus recognized!"); $$ = $1 + $3; printf("\n%d", $$);}
-	|	E '+' {printf("\nSyntax error: Right operand missing.");}
+	|	E '+' {printf("\nSyntax error: Right operand missing."); exit(0);}
 	|	E '-' E {printf("\nMinus recognized!"); $$ = $1 - $3; printf("\n%d", $$);}
-	|	E '-' {printf("\nSyntax error: Right operand missing.");}
+	|	E '-' {printf("\nSyntax error: Right operand missing."); exit(0);}
 	|	E '*' E {printf("\nMultiplication recognized!"); $$ = $1 * $3; printf("\n%d", $$);}
-	|	E '*' {printf("\nSyntax error: Right operand missing.");}
+	|	E '*' {printf("\nSyntax error: Right operand missing."); exit(0);}
 	|	E '/' E {printf("\nDivision recognized!"); $$ = $1 / $3; printf("\n%d", $$);}
-	|	E '/' {printf("\nSyntax error: Right operand missing.");}
+	|	E '/' {printf("\nSyntax error: Right operand missing."); exit(0);}
 	|	E '%' E {printf("\nModulus recognized!"); $$ = $1 % $3; printf("\n%d", $$);}
-	|	E '%' {printf("\nSyntax error: Right operand missing.");}
+	|	E '%' {printf("\nSyntax error: Right operand missing."); exit(0);}
 	|	id
 	|	num
 	;

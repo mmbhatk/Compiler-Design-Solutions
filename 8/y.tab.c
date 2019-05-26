@@ -364,18 +364,18 @@ union yyalloc
 #endif /* !YYCOPY_NEEDED */
 
 /* YYFINAL -- State number of the termination state.  */
-#define YYFINAL  11
+#define YYFINAL  9
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   71
+#define YYLAST   69
 
 /* YYNTOKENS -- Number of terminals.  */
 #define YYNTOKENS  17
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  4
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  30
+#define YYNRULES  28
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  39
+#define YYNSTATES  37
 
 #define YYUNDEFTOK  2
 #define YYMAXUTOK   260
@@ -423,9 +423,8 @@ static const yytype_uint8 yytranslate[] =
 static const yytype_uint8 yyrline[] =
 {
        0,    13,    13,    15,    16,    17,    18,    19,    20,    21,
-      22,    23,    24,    25,    26,    27,    28,    29,    31,    32,
-      33,    34,    35,    36,    37,    38,    39,    40,    41,    42,
-      43
+      22,    23,    24,    25,    26,    27,    29,    30,    31,    32,
+      33,    34,    35,    36,    37,    38,    39,    40,    41
 };
 #endif
 
@@ -455,7 +454,7 @@ static const yytype_uint16 yytoknum[] =
 #define yypact_value_is_default(Yystate) \
   (!!((Yystate) == (-9)))
 
-#define YYTABLE_NINF -18
+#define YYTABLE_NINF -4
 
 #define yytable_value_is_error(Yytable_value) \
   0
@@ -464,10 +463,10 @@ static const yytype_uint16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-       0,     7,    15,    63,    18,    -9,    45,    -9,    -9,    63,
-      29,    -9,    63,    63,    63,    63,    16,    28,     2,     8,
-      63,    40,    23,    -8,    -8,     9,     9,    63,    55,    63,
-      55,    63,    63,    55,    -9,    55,    55,    55,    55
+      -2,    -9,    -9,    61,     5,    -9,    43,    61,    27,    -9,
+      61,    61,    61,    61,    14,    26,    -8,     2,    61,    38,
+      21,     4,     4,     7,     7,    61,    53,    61,    53,    61,
+      61,    53,    -9,    53,    53,    53,    53
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -475,10 +474,10 @@ static const yytype_int8 yypact[] =
      means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-       0,    29,    30,     0,     0,     2,     0,    29,    30,     0,
-       0,     1,    20,    22,    24,    26,     5,     7,     0,     0,
-      28,     0,    18,    19,    21,    23,    25,     9,     4,    11,
-       6,    15,    13,    27,    18,     8,    10,    14,    12
+       0,    27,    28,     0,     0,     2,     0,     0,     0,     1,
+      18,    20,    22,    24,     5,     7,     0,     0,    26,     0,
+      16,    17,    19,    21,    23,     9,     4,    11,     6,    15,
+      13,    25,    16,     8,    10,    14,    12
 };
 
   /* YYPGOTO[NTERM-NUM].  */
@@ -498,54 +497,50 @@ static const yytype_int8 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_int8 yytable[] =
 {
-      10,    14,    15,     1,     2,     3,    21,   -16,    20,    23,
-      24,    25,    26,    28,    30,   -17,    31,    33,    11,     7,
-       8,     9,    32,    -3,    35,    20,    36,     0,    37,    38,
-      27,     7,     8,     9,     0,    22,    12,    13,    14,    15,
-       0,     0,    29,     0,     0,    20,    34,    12,    13,    14,
-      15,     0,    12,    13,    14,    15,    20,    16,    17,    18,
-      19,    20,    12,    13,    14,    15,     7,     8,     9,     0,
-       0,    20
+       8,     1,     2,     3,    19,     9,    29,    21,    22,    23,
+      24,    26,    28,    12,    13,    31,    30,     1,     2,     7,
+      18,    -3,    33,    18,    34,     0,    35,    36,    25,     1,
+       2,     7,     0,    20,    10,    11,    12,    13,     0,     0,
+      27,     0,     0,    18,    32,    10,    11,    12,    13,     0,
+      10,    11,    12,    13,    18,    14,    15,    16,    17,    18,
+      10,    11,    12,    13,     1,     2,     7,     0,     0,    18
 };
 
 static const yytype_int8 yycheck[] =
 {
-       3,     9,    10,     3,     4,     5,     9,     0,    16,    12,
-      13,    14,    15,    16,    17,     0,    14,    20,     0,     3,
-       4,     5,    14,     0,    27,    16,    29,    -1,    31,    32,
-      14,     3,     4,     5,    -1,     6,     7,     8,     9,    10,
-      -1,    -1,    14,    -1,    -1,    16,     6,     7,     8,     9,
-      10,    -1,     7,     8,     9,    10,    16,    12,    13,    14,
-      15,    16,     7,     8,     9,    10,     3,     4,     5,    -1,
-      -1,    16
+       3,     3,     4,     5,     7,     0,    14,    10,    11,    12,
+      13,    14,    15,     9,    10,    18,    14,     3,     4,     5,
+      16,     0,    25,    16,    27,    -1,    29,    30,    14,     3,
+       4,     5,    -1,     6,     7,     8,     9,    10,    -1,    -1,
+      14,    -1,    -1,    16,     6,     7,     8,     9,    10,    -1,
+       7,     8,     9,    10,    16,    12,    13,    14,    15,    16,
+       7,     8,     9,    10,     3,     4,     5,    -1,    -1,    16
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
      symbol of state STATE-NUM.  */
 static const yytype_uint8 yystos[] =
 {
-       0,     3,     4,     5,    18,    19,    20,     3,     4,     5,
-      20,     0,     7,     8,     9,    10,    12,    13,    14,    15,
-      16,    20,     6,    20,    20,    20,    20,    14,    20,    14,
-      20,    14,    14,    20,     6,    20,    20,    20,    20
+       0,     3,     4,     5,    18,    19,    20,     5,    20,     0,
+       7,     8,     9,    10,    12,    13,    14,    15,    16,    20,
+       6,    20,    20,    20,    20,    14,    20,    14,    20,    14,
+      14,    20,     6,    20,    20,    20,    20
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
        0,    17,    18,    19,    19,    19,    19,    19,    19,    19,
-      19,    19,    19,    19,    19,    19,    19,    19,    20,    20,
-      20,    20,    20,    20,    20,    20,    20,    20,    20,    20,
-      20
+      19,    19,    19,    19,    19,    19,    20,    20,    20,    20,
+      20,    20,    20,    20,    20,    20,    20,    20,    20
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
 static const yytype_uint8 yyr2[] =
 {
        0,     2,     1,     3,     3,     2,     3,     2,     4,     3,
-       4,     3,     4,     3,     4,     3,     1,     1,     3,     3,
-       2,     3,     2,     3,     2,     3,     2,     3,     2,     1,
-       1
+       4,     3,     4,     3,     4,     3,     3,     3,     2,     3,
+       2,     3,     2,     3,     2,     3,     2,     1,     1
 };
 
 
@@ -1233,155 +1228,155 @@ yyreduce:
         case 2:
 #line 13 "file1.y" /* yacc.c:1652  */
     {printf("\nValid expression.");}
-#line 1237 "y.tab.c" /* yacc.c:1652  */
+#line 1232 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 3:
 #line 15 "file1.y" /* yacc.c:1652  */
     {printf("\nParanthesis recognized.");}
-#line 1243 "y.tab.c" /* yacc.c:1652  */
+#line 1238 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 4:
 #line 16 "file1.y" /* yacc.c:1652  */
     {printf("\nLess than recognized."); yyval = (yyvsp[-2] < yyvsp[0]); printf("\n%d", yyval);}
-#line 1249 "y.tab.c" /* yacc.c:1652  */
+#line 1244 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 5:
 #line 17 "file1.y" /* yacc.c:1652  */
     {printf("\nSyntax error. Right operand missing."); exit(0);}
-#line 1255 "y.tab.c" /* yacc.c:1652  */
+#line 1250 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 6:
 #line 18 "file1.y" /* yacc.c:1652  */
     {printf("\nGreater than recognized."); yyval = (yyvsp[-2] > yyvsp[0]); printf("\n%d", yyval);}
-#line 1261 "y.tab.c" /* yacc.c:1652  */
+#line 1256 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 7:
 #line 19 "file1.y" /* yacc.c:1652  */
     {printf("\nSyntax error. Right operand missing."); exit(0);}
-#line 1267 "y.tab.c" /* yacc.c:1652  */
+#line 1262 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 8:
 #line 20 "file1.y" /* yacc.c:1652  */
     {printf("\nLess than or equal to recognized."); yyval = (yyvsp[-3] <= yyvsp[0]); printf("\n%d", yyval);}
-#line 1273 "y.tab.c" /* yacc.c:1652  */
+#line 1268 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 9:
 #line 21 "file1.y" /* yacc.c:1652  */
     {printf("\nSyntax error. Right operand missing."); exit(0);}
-#line 1279 "y.tab.c" /* yacc.c:1652  */
+#line 1274 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 10:
 #line 22 "file1.y" /* yacc.c:1652  */
     {printf("\nGreater than or equal to recognized."); yyval = (yyvsp[-3] >= yyvsp[0]); printf("\n%d", yyval);}
-#line 1285 "y.tab.c" /* yacc.c:1652  */
+#line 1280 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 11:
 #line 23 "file1.y" /* yacc.c:1652  */
     {printf("\nSyntax error. Right operand missing."); exit(0);}
-#line 1291 "y.tab.c" /* yacc.c:1652  */
+#line 1286 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 12:
 #line 24 "file1.y" /* yacc.c:1652  */
     {printf("\nNot equal to recognized."); yyval = (yyvsp[-3] != yyvsp[0]); printf("\n%d", yyval);}
-#line 1297 "y.tab.c" /* yacc.c:1652  */
+#line 1292 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 13:
 #line 25 "file1.y" /* yacc.c:1652  */
     {printf("\nSyntax error. Right operand missing."); exit(0);}
-#line 1303 "y.tab.c" /* yacc.c:1652  */
+#line 1298 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 14:
 #line 26 "file1.y" /* yacc.c:1652  */
     {printf("\nEqual to recognized."); yyval = (yyvsp[-3] == yyvsp[0]); printf("\n%d", yyval);}
-#line 1309 "y.tab.c" /* yacc.c:1652  */
+#line 1304 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 15:
 #line 27 "file1.y" /* yacc.c:1652  */
     {printf("\nSyntax error. Right operand missing."); exit(0);}
-#line 1315 "y.tab.c" /* yacc.c:1652  */
+#line 1310 "y.tab.c" /* yacc.c:1652  */
+    break;
+
+  case 16:
+#line 29 "file1.y" /* yacc.c:1652  */
+    {printf("\nParanthesis recognized."); yyval = yyvsp[-1];}
+#line 1316 "y.tab.c" /* yacc.c:1652  */
+    break;
+
+  case 17:
+#line 30 "file1.y" /* yacc.c:1652  */
+    {printf("\nPlus recognized!"); yyval = yyvsp[-2] + yyvsp[0]; printf("\n%d", yyval);}
+#line 1322 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 18:
 #line 31 "file1.y" /* yacc.c:1652  */
-    {printf("\nParanthesis recognized."); yyval = yyvsp[-1];}
-#line 1321 "y.tab.c" /* yacc.c:1652  */
+    {printf("\nSyntax error: Right operand missing."); exit(0);}
+#line 1328 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 19:
 #line 32 "file1.y" /* yacc.c:1652  */
-    {printf("\nPlus recognized!"); yyval = yyvsp[-2] + yyvsp[0]; printf("\n%d", yyval);}
-#line 1327 "y.tab.c" /* yacc.c:1652  */
+    {printf("\nMinus recognized!"); yyval = yyvsp[-2] - yyvsp[0]; printf("\n%d", yyval);}
+#line 1334 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 20:
 #line 33 "file1.y" /* yacc.c:1652  */
-    {printf("\nSyntax error: Right operand missing.");}
-#line 1333 "y.tab.c" /* yacc.c:1652  */
+    {printf("\nSyntax error: Right operand missing."); exit(0);}
+#line 1340 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 21:
 #line 34 "file1.y" /* yacc.c:1652  */
-    {printf("\nMinus recognized!"); yyval = yyvsp[-2] - yyvsp[0]; printf("\n%d", yyval);}
-#line 1339 "y.tab.c" /* yacc.c:1652  */
+    {printf("\nMultiplication recognized!"); yyval = yyvsp[-2] * yyvsp[0]; printf("\n%d", yyval);}
+#line 1346 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 22:
 #line 35 "file1.y" /* yacc.c:1652  */
-    {printf("\nSyntax error: Right operand missing.");}
-#line 1345 "y.tab.c" /* yacc.c:1652  */
+    {printf("\nSyntax error: Right operand missing."); exit(0);}
+#line 1352 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 23:
 #line 36 "file1.y" /* yacc.c:1652  */
-    {printf("\nMultiplication recognized!"); yyval = yyvsp[-2] * yyvsp[0]; printf("\n%d", yyval);}
-#line 1351 "y.tab.c" /* yacc.c:1652  */
+    {printf("\nDivision recognized!"); yyval = yyvsp[-2] / yyvsp[0]; printf("\n%d", yyval);}
+#line 1358 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 24:
 #line 37 "file1.y" /* yacc.c:1652  */
-    {printf("\nSyntax error: Right operand missing.");}
-#line 1357 "y.tab.c" /* yacc.c:1652  */
+    {printf("\nSyntax error: Right operand missing."); exit(0);}
+#line 1364 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 25:
 #line 38 "file1.y" /* yacc.c:1652  */
-    {printf("\nDivision recognized!"); yyval = yyvsp[-2] / yyvsp[0]; printf("\n%d", yyval);}
-#line 1363 "y.tab.c" /* yacc.c:1652  */
+    {printf("\nModulus recognized!"); yyval = yyvsp[-2] % yyvsp[0]; printf("\n%d", yyval);}
+#line 1370 "y.tab.c" /* yacc.c:1652  */
     break;
 
   case 26:
 #line 39 "file1.y" /* yacc.c:1652  */
-    {printf("\nSyntax error: Right operand missing.");}
-#line 1369 "y.tab.c" /* yacc.c:1652  */
-    break;
-
-  case 27:
-#line 40 "file1.y" /* yacc.c:1652  */
-    {printf("\nModulus recognized!"); yyval = yyvsp[-2] % yyvsp[0]; printf("\n%d", yyval);}
-#line 1375 "y.tab.c" /* yacc.c:1652  */
-    break;
-
-  case 28:
-#line 41 "file1.y" /* yacc.c:1652  */
-    {printf("\nSyntax error: Right operand missing.");}
-#line 1381 "y.tab.c" /* yacc.c:1652  */
+    {printf("\nSyntax error: Right operand missing."); exit(0);}
+#line 1376 "y.tab.c" /* yacc.c:1652  */
     break;
 
 
-#line 1385 "y.tab.c" /* yacc.c:1652  */
+#line 1380 "y.tab.c" /* yacc.c:1652  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1612,7 +1607,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 45 "file1.y" /* yacc.c:1918  */
+#line 43 "file1.y" /* yacc.c:1918  */
 
 
 main()
