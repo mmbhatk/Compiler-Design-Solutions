@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<conio.h>
+
+/*This is a multiline
+comment okay
+which goes on for
+four lines.*/
+
+/*This is another multiline comment
+//with a single line comment within it.
+this is the third and last line of this comment.*/
+
+//This is a single line comment
+//another single line comment
+
+/*
+this is yet another comment okay
+/*
+and it goes on and on
+and until it finally terminates
+over here*/
+
+/*
+this is the last multiline comment
+the fun part is
+it never terminates
