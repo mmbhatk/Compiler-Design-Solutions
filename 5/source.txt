@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+    if(a>5)    {printf("hi");}
+    else if(a==5) {printf("hello");}
+    else {printf("sweet");}
+
+    if(a)    {printf("hi");}
+    else if(b>10) {printf("hello");}
+    else if(a!=b) {printf("candy");}
+    else {printf("sweet");}
+
+    if(b)    {printf("hi");}
+    else if(b>10) {printf("hello");}
+    else if(a!=b) {printf("candy");}
+    
+    if(a>b>=d)    {printf("hi");}
+    else if(b>10) {printf("hello");}
+    else if(a!=b) {printf("candy");}
+    else {printf("sweet");}
+
+    if(g)    {printf("hi");}
+    else if(b>10) {printf("hello");}
+    else if(a!=b) {printf("candy");}
+    else {printf("sweet");}
+    else {printf("sweet");}
+}
