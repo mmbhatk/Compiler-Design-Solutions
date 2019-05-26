@@ -25,8 +25,6 @@ M	:	'(' E ')' {printf("\nParanthesis recognized.");}
 	|	E '!''=' {printf("\nSyntax error. Right operand missing."); exit(0);}
 	|	E '=''=' E {printf("\nEqual to recognized."); $$ = ($1 == $4); printf("\n%d", $$);}
 	|	E '=''=' {printf("\nSyntax error. Right operand missing."); exit(0);}
-	|	id
-	|	num
 	;
 E	:	'(' E ')' {printf("\nParanthesis recognized."); $$ = $2;}
 	|	E '+' E {printf("\nPlus recognized!"); $$ = $1 + $3; printf("\n%d", $$);}
