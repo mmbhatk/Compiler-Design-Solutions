@@ -6,7 +6,6 @@
 %left '(' ')'
 
 %%
-E	:	S {printf("\nValid expression.\n");}
 S	:	S S '*'
 	|	S S '+'
 	|	id

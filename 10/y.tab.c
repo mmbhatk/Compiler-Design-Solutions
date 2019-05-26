@@ -359,18 +359,18 @@ union yyalloc
 #endif /* !YYCOPY_NEEDED */
 
 /* YYFINAL -- State number of the termination state.  */
-#define YYFINAL  6
+#define YYFINAL  5
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   13
+#define YYLAST   15
 
 /* YYNTOKENS -- Number of terminals.  */
 #define YYNTOKENS  8
 /* YYNNTS -- Number of nonterminals.  */
-#define YYNNTS  3
+#define YYNNTS  2
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  6
+#define YYNRULES  5
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  11
+#define YYNSTATES  10
 
 #define YYUNDEFTOK  2
 #define YYMAXUTOK   258
@@ -416,7 +416,7 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,     9,     9,    10,    11,    12,    13
+       0,     9,     9,    10,    11,    12
 };
 #endif
 
@@ -426,7 +426,7 @@ static const yytype_uint8 yyrline[] =
 static const char *const yytname[] =
 {
   "$end", "error", "$undefined", "id", "'('", "')'", "'*'", "'+'",
-  "$accept", "E", "S", YY_NULLPTR
+  "$accept", "S", YY_NULLPTR
 };
 #endif
 
@@ -453,8 +453,7 @@ static const yytype_uint16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-       9,    -4,     9,    11,     9,     2,    -4,    -3,    -4,    -4,
-      -4
+      11,    -4,    11,     2,     4,    -4,    -3,    -4,    -4,    -4
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -462,20 +461,19 @@ static const yytype_int8 yypact[] =
      means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-       0,     5,     0,     0,     2,     0,     1,     0,     6,     3,
-       4
+       0,     4,     0,     0,     0,     1,     0,     5,     2,     3
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-      -4,    -4,     8
+      -4,    10
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int8 yydefgoto[] =
 {
-      -1,     3,     7
+      -1,     6
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -483,34 +481,33 @@ static const yytype_int8 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_uint8 yytable[] =
 {
-       1,     2,     0,     9,    10,     1,     2,     8,     4,     0,
-       5,     6,     1,     2
+       1,     2,     5,     8,     9,     1,     2,     1,     2,     7,
+       3,     0,     4,     0,     1,     2
 };
 
 static const yytype_int8 yycheck[] =
 {
-       3,     4,    -1,     6,     7,     3,     4,     5,     0,    -1,
-       2,     0,     3,     4
+       3,     4,     0,     6,     7,     3,     4,     3,     4,     5,
+       0,    -1,     2,    -1,     3,     4
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
      symbol of state STATE-NUM.  */
 static const yytype_uint8 yystos[] =
 {
-       0,     3,     4,     9,    10,    10,     0,    10,     5,     6,
-       7
+       0,     3,     4,     9,     9,     0,     9,     5,     6,     7
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
-       0,     8,     9,    10,    10,    10,    10
+       0,     8,     9,     9,     9,     9
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
 static const yytype_uint8 yyr2[] =
 {
-       0,     2,     1,     3,     3,     1,     3
+       0,     2,     3,     3,     1,     3
 };
 
 
@@ -1195,14 +1192,8 @@ yyreduce:
   YY_REDUCE_PRINT (yyn);
   switch (yyn)
     {
-        case 2:
-#line 9 "file1.y" /* yacc.c:1652  */
-    {printf("\nValid expression.\n");}
-#line 1202 "y.tab.c" /* yacc.c:1652  */
-    break;
-
-
-#line 1206 "y.tab.c" /* yacc.c:1652  */
+      
+#line 1197 "y.tab.c" /* yacc.c:1652  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1433,7 +1424,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 15 "file1.y" /* yacc.c:1918  */
+#line 14 "file1.y" /* yacc.c:1918  */
 
 
 main()
