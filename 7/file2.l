@@ -8,7 +8,7 @@
 [a-zA-Z][a-zA-Z0-9]* {return id;}
 [0-9]+[.]?[0-9]* {return num;}
 ("["[0-9]+"]")+ {return arr;}
-[ \t] ;
+[\t] ;
 \n {return 0;}
 . {return yytext[0];}
 %%

@@ -1232,7 +1232,7 @@ yyreduce:
 
   case 9:
 #line 18 "file1.y" /* yacc.c:1652  */
-    {printf("\nArray size cannot be an ID.\n"); exit(0);}
+    {printf("\nArray size cannot be an id.\n"); exit(0);}
 #line 1237 "y.tab.c" /* yacc.c:1652  */
     break;
 
