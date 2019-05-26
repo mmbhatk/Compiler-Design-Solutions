@@ -1,0 +1,5 @@
+struct abc{};
+struct{int something;float somethingelse;};
+struct abc{int something;float somethingelse;};
+struct abc{int something;float somethingelse;}
+struct abc{int something};
