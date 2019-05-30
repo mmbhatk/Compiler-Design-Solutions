@@ -1,0 +1,12 @@
+a = 'a';
+b = '';
+c = 'abc';
+a = "something here"
+b = "this goes on for
+more than
+one line
+okay bye"
+c = "and this one never
+ever
+ever ends.
+okay?
