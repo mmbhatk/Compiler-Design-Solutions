@@ -13,10 +13,10 @@ S	:	E {printf("\nValid expression. Value of expression: %d\n", $$);}
 	;
 E	:	'(' E ')' {printf("\nParanthesis recognized."); $$ = $2;}
 	|	E '+' E {printf("\nPlus recognized!"); $$ = $1 + $3; printf("\n%d", $$);}
-	|	'+''+' E {printf("\nPre-increment operator recognized."); $$ = $3 + 1; printf("\n%d", $$);}
+	|	'+''+' id {printf("\nIncrement operator recognized."); $$ = $3 + 1; printf("\n%d", $$);}
 	|	E '+' {printf("\nSyntax error: Right operand missing.");}
 	|	E '-' E {printf("\nMinus recognized!"); $$ = $1 - $3; printf("\n%d", $$);}
-	|	'-''-' E {printf("\Pre-decrement operator recognized."); $$ = $3 - 1; printf("\n%d", $$);}
+	|	'-''-' id {printf("\nDecrement operator recognized."); $$ = $3 - 1; printf("\n%d", $$);}
 	|	E '-' {printf("\nSyntax error: Right operand missing.");}
 	|	E '*' E {printf("\nMultiplication recognized!"); $$ = $1 * $3; printf("\n%d", $$);}
 	|	E '*' {printf("\nSyntax error: Right operand missing.");}

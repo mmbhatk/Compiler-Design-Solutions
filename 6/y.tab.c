@@ -365,7 +365,7 @@ union yyalloc
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  11
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   35
+#define YYLAST   33
 
 /* YYNTOKENS -- Number of terminals.  */
 #define YYNTOKENS  13
@@ -446,10 +446,10 @@ static const yytype_uint16 yytoknum[] =
 };
 # endif
 
-#define YYPACT_NINF -9
+#define YYPACT_NINF -6
 
 #define yypact_value_is_default(Yystate) \
-  (!!((Yystate) == (-9)))
+  (!!((Yystate) == (-6)))
 
 #define YYTABLE_NINF -1
 
@@ -460,9 +460,9 @@ static const yytype_uint16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-      18,    -9,    -9,    18,    -4,     0,     5,    20,     8,    18,
-      18,    -9,    30,    30,    30,    30,    18,    -9,    -8,    -8,
-      -8,    -8,     7,     7,    20
+      11,    -6,    -6,    11,    -1,     0,    24,    13,    -5,    14,
+      25,    -6,    27,    27,    27,    27,    11,    -6,    -6,    -6,
+      17,    17,    21,    21,    13
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -478,7 +478,7 @@ static const yytype_uint8 yydefact[] =
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-      -9,    -9,    -3
+      -6,    -6,    -3
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
@@ -492,18 +492,18 @@ static const yytype_int8 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_uint8 yytable[] =
 {
-       8,    14,    15,     9,    16,    11,    18,    19,    10,    20,
-      21,    22,    23,    24,    17,    12,    13,    14,    15,    16,
-      16,     1,     2,     3,     0,     4,     5,    12,    13,    14,
-      15,     0,    16,     1,     2,     3
+       8,    17,    12,    13,    14,    15,     9,    16,    10,    20,
+      21,    22,    23,    24,     1,     2,     3,    18,     4,     5,
+      12,    13,    14,    15,    11,    16,    14,    15,    19,    16,
+       1,     2,     3,    16
 };
 
-static const yytype_int8 yycheck[] =
+static const yytype_uint8 yycheck[] =
 {
-       3,     9,    10,     7,    12,     0,     9,    10,     8,    12,
-      13,    14,    15,    16,     6,     7,     8,     9,    10,    12,
-      12,     3,     4,     5,    -1,     7,     8,     7,     8,     9,
-      10,    -1,    12,     3,     4,     5
+       3,     6,     7,     8,     9,    10,     7,    12,     8,    12,
+      13,    14,    15,    16,     3,     4,     5,     3,     7,     8,
+       7,     8,     9,    10,     0,    12,     9,    10,     3,    12,
+       3,     4,     5,    12
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
@@ -511,7 +511,7 @@ static const yytype_int8 yycheck[] =
 static const yytype_uint8 yystos[] =
 {
        0,     3,     4,     5,     7,     8,    14,    15,    15,     7,
-       8,     0,     7,     8,     9,    10,    12,     6,    15,    15,
+       8,     0,     7,     8,     9,    10,    12,     6,     3,     3,
       15,    15,    15,    15,    15
 };
 
@@ -1231,7 +1231,7 @@ yyreduce:
 
   case 5:
 #line 16 "file1.y" /* yacc.c:1652  */
-    {printf("\nPre-increment operator recognized."); yyval = yyvsp[0] + 1; printf("\n%d", yyval);}
+    {printf("\nIncrement operator recognized."); yyval = yyvsp[0] + 1; printf("\n%d", yyval);}
 #line 1236 "y.tab.c" /* yacc.c:1652  */
     break;
 
@@ -1249,7 +1249,7 @@ yyreduce:
 
   case 8:
 #line 19 "file1.y" /* yacc.c:1652  */
-    {printf("\Pre-decrement operator recognized."); yyval = yyvsp[0] - 1; printf("\n%d", yyval);}
+    {printf("\nDecrement operator recognized."); yyval = yyvsp[0] - 1; printf("\n%d", yyval);}
 #line 1254 "y.tab.c" /* yacc.c:1652  */
     break;
 
